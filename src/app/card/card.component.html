@@ -1,0 +1,10 @@
+<mat-card class="example-card" (click)="change()" 
+[ngStyle]="{
+  'background-color': h1Style ? h1Style : ''
+}">
+  <mat-card-content>
+    <p>
+     {{name}}
+    </p>
+  </mat-card-content>
+</mat-card>
