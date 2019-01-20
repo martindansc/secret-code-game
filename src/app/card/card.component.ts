@@ -6,22 +6,32 @@ import { Component, OnInit,  Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 
-
-
 export class CardComponent implements OnInit {
 
   @Input()  color: string;
   @Input()  name: string;
-  @Input()  narrator: boolean;
-  h1Style = null;
+  @Input('narrator') 
+  get inarrator(): boolean {
+    return this.narrator;
+  }
+  set inarrator(value: boolean) {
+    this.narrator = "" + value !== "false";
+  }
+
+  cardColor = 'white';
+  narrator : boolean;
+  
   constructor() { }
 
   ngOnInit() {
-  
+    console.log(this.narrator);
+    if(this.narrator) {
+      this.cardColor = this.color;
+    }
   }
 
   change(){
-    this.h1Style = this.color;
+    this.cardColor = this.color;
     this.name ='';
   }
 

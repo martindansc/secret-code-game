@@ -10,6 +10,8 @@ import { CardsComponent } from './cards/cards.component';
 
 import {MatCardModule} from '@angular/material';
 
+import {AngularFittextModule} from 'angular-fittext';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import {MatCardModule} from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    AngularFittextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

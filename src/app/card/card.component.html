@@ -1,10 +1,8 @@
-<mat-card class="example-card" (click)="change()" 
+<div class="card text-center border border-secondary" fittext (click)="change()" 
 [ngStyle]="{
-  'background-color': h1Style ? h1Style : ''
+  'background-color': cardColor
 }">
-  <mat-card-content>
-    <p>
-     {{name}}
-    </p>
-  </mat-card-content>
-</mat-card>
+{{name}}
+
+
+<div>
